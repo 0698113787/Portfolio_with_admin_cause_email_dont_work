@@ -10,11 +10,11 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
-# Admin credentials
+#Admin credentials
 ADMIN_USERNAME = 'Andile'
 ADMIN_PASSWORD = '2010'
 
-# Database Model
+#Database Model
 class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
@@ -27,7 +27,7 @@ class Message(db.Model):
     def __repr__(self):
         return f'<Message {self.id} from {self.name}>'
 
-# Create tables
+#Create tables
 with app.app_context():
     db.create_all()
 
