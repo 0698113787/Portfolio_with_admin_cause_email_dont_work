@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='testimonials.css') }}">
+</head>
+<body>
+    {% extends 'header.html' %}
+
+    {% block content %}
+   
+    <div class="gallery" data-aos="fade-up">
+        <h4>Mentor Nkosinathi Ngubane</h4>
+        <img src="{{ url_for('static', filename='Nathi_Mentor.jpeg') }}" alt="Nkosinathi Ngubane" loading="lazy">
+        <div class="para">
+            <p>"Andile is one of the most promising young developers, I've had the pleasure of mentoring. His eagerness to learn, coupled with his strong work ethics makes him an exceptional talent. Andile's ability to grasp complex concepts and apply them to real-world problems is impressive. I've witnessed significant growth in his skills and confidence and I have no doubt he'll excel in his future endeavors"</p>
+        </div>
+    </div>
+
+    <div class="gallery" data-aos="fade-up">
+        <h4>Sbani</h4>
+        <img src="{{ url_for('static', filename='sbani_po.jpeg') }}" alt="Sbani" loading="lazy">
+        <div class="para">
+            <p>"Andile is an exceptional individual with a passion for IT and web development. I've had the pleasure of collaborating with them on various projects, and I'm constantly impressed by their dedication, creativity and problem solving skills. Their enthusiasm is contagious, and they have been tremendous source of encouragement and motivation for me throughout our course. I'm honored to be learning alongside someone as talented and supportive as Andile Ntshangase."</p>
+        </div>
+    </div>
+
+    <div class="gallery" data-aos="fade-up">
+        <h4>Miss Neliswa</h4>
+        <img src="{{ url_for('static', filename='Neliswa_po.jpeg') }}" alt="Neliswa" loading="lazy">
+        <div class="para">
+            <p>"I have seen Andile's growth as developer, and it's been incredible. But what's even more amazing is how far he's come from high school days, when he was dead-set on becoming a radiographer.<br> Who would have thought that he would discover a passion for coding and become the talented developer he is today. As a sibling I have a front-row seat to his journey and I'm constantly amazed by his creativity, work ethics and kindness. Andile is a talented developer and an amazing brother, I'm so proud of him"</p>  
+        </div>
+    </div>
+
+    <div class="gallery" data-aos="fade-up">
+        <h4>Mr Lungisani</h4>
+        <img src="{{ url_for('static', filename='bro_lungisani_po.jpeg') }}" alt="Lungisani" loading="lazy"> 
+        <div class="para">
+            <p>"Andile is an exceptional developer with a passion for innovation. I've had the privilege of watching him grow and refine his skills. But what's remarkable is how he evolved from his high school days, when he was interested in pursuing a career in radiography. His pivot to coding has been seamless and his dedication, creativity and attention to detail are truly impressive. As his brother I've seen firsthand his ability to bring ideas to life and I have no doubt he'll make a significant impact in the technology industry"</p>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-top-btn" title="Go to top">
+        <span>↑</span>
+    </button>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all gallery items
+        document.querySelectorAll('.gallery').forEach(gallery => {
+            gallery.style.opacity = '0';
+            observer.observe(gallery);
+        });
+        
+        // Scroll to top button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Image loading effects
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+                this.style.transform = 'scale(1)';
+            });
+            
+            img.style.opacity = '0';
+            img.style.transform = 'scale(0.8)';
+            img.style.transition = 'all 0.5s ease';
+        });
+        
+    });
+    </script>
+
+    {% endblock %}
+    
+</body>
+</html>

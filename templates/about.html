@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='about.css') }}">
+     <script src="https://kit.fontawesome.com/3faf2d4743.js" crossorigin="anonymous"></script>
+</head>
+<body>
+{% extends 'header.html' %}
+
+{% block content %}
+
+ <main class="main-content">
+        <div class="container">
+            <!-- Header Section -->
+            <section class="page-header">
+                <h1 class="page-title">About <span class="highlight">Me</span></h1>
+                <p class="page-subtitle">Get to know more about my journey, inspiration, and how to connect with me</p>
+            </section>
+
+            <!-- Contact Information Grid -->
+            <section class="contact-section">
+                <div class="contact-grid">
+                    <!-- Location Card -->
+                    <div class="contact-card location-card">
+                        <div class="card-header">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Location</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="address-item">
+                                <h4><i class="fas fa-home"></i> Home Address</h4>
+                                <div class="address-details">
+                                    <p>Ulundi</p>
+                                    <p>P.O Box 06</p>
+                                    <p>3838</p>
+                                </div>
+                            </div>
+                            <div class="address-item">
+                                <h4><i class="fas fa-building"></i> Current Address</h4>
+                                <div class="address-details">
+                                    <p>Durban</p>
+                                    <p>P.O Box 1014</p>
+                                    <p>4000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Details Card -->
+                    <div class="contact-card contact-details-card">
+                        <div class="card-header">
+                            <i class="fas fa-phone"></i>
+                            <h3>Contact Details</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h4>Phone</h4>
+                                    <a href="tel:0698113787" class="contact-link">0698113787</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h4>Email</h4>
+                                    <a href="mailto:vuyiswaandile176@gmail.com" class="contact-link">vuyiswaandile176@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social Media Section -->
+            <section class="social-section">
+                <div class="social-card">
+                    <div class="card-header">
+                        <i class="fas fa-share-alt"></i>
+                        <h3>Connect With Me</h3>
+                    </div>
+                    <div class="social-grid">
+                        <a href="https://linkid.com@www.linkedin.com/in/andile-vuyiswa-5a89192a1" target="_blank" class="social-link linkedin">
+                            <div class="social-icon">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <div class="social-info">
+                                <h4>LinkedIn</h4>
+                                <p>Professional Network</p>
+                            </div>
+                            <i class="fas fa-external-link-alt external-icon"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/andile.mgazi.226353/" class="social-link facebook">
+                            <div class="social-icon">
+                                <i class="fa-brands fa-facebook"></i>
+                            </div>
+                            <div class="social-info">
+                                <h4>Facebook</h4>
+                                <p>Social Updates</p>
+                            </div>
+                            <i class="fas fa-external-link-alt external-icon"></i>
+                        </a>
+
+                        <a href="#" class="social-link twitter">
+                            <div class="social-icon">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </div>
+                            <div class="social-info">
+                                <h4>X (Twitter)</h4>
+                                <p>Latest Thoughts</p>
+                            </div>
+                            <i class="fas fa-external-link-alt external-icon"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/mgazi.andile/" class="social-link instagram">
+                            <div class="social-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div class="social-info">
+                                <h4>Instagram</h4>
+                                <p>Visual Journey</p>
+                            </div>
+                            <i class="fas fa-external-link-alt external-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Inspiration Section -->
+            <section class="inspiration-section">
+                <div class="inspiration-card">
+                    <div class="card-header">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>My Inspiration</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="inspiration-content">
+                            <div class="inspiration-intro">
+                                <p class="lead-text">
+                                    Behind every successful journey, there are people who inspire and guide us. 
+                                    Here are the incredible individuals who have shaped my path in the IT world:
+                                </p>
+                            </div>
+
+                            <div class="inspirations-grid">
+                                <div class="inspiration-person primary-inspiration">
+                                    <div class="person-header">
+                                        <div class="person-icon">
+                                            <i class="fas fa-user-tie"></i>
+                                        </div>
+                                        <div class="person-info">
+                                            <h4>Nkosinathi Ngubane</h4>
+                                            <p class="person-role">Contract Commercial Coordinator at ABSA</p>
+                                        </div>
+                                    </div>
+                                    <div class="person-description">
+                                        <p>
+                                            My primary inspiration who studied System Development. Although he wasn't able 
+                                            to work directly in the field, he gained tremendous wisdom in IT that he has 
+                                            generously shared with me over the past few years. He helped me understand 
+                                            how IT systems work, computer definitions, and the language of technology.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="other-inspirations">
+                                    <h4><i class="fas fa-users"></i> Other Amazing Inspirations</h4>
+                                    
+                                    <div class="inspiration-person">
+                                        <div class="person-header">
+                                            <div class="person-icon">
+                                                <i class="fas fa-calculator"></i>
+                                            </div>
+                                            <div class="person-info">
+                                                <h5>Thulani & Chimpazne</h5>
+                                                <p class="person-role">Works at SARS, Pretoria</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="inspiration-person">
+                                        <div class="person-header">
+                                            <div class="person-icon">
+                                                <i class="fas fa-code"></i>
+                                            </div>
+                                            <div class="person-info">
+                                                <h5>Yenzokuhle Madonsela</h5>
+                                                <p class="person-role">Software Developer, Gauteng</p>
+                                            </div>
+                                        </div>
+                                        <div class="person-description">
+                                            <p>A self-taught coding maestro who continues to inspire through his social media presence.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="inspiration-note">
+                                <div class="note-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <p>
+                                    The funny thing is, they don't even know they're inspiring me! Their social media posts 
+                                    and shared experiences continue to motivate my journey in technology. Sometimes the best 
+                                    mentors are those who lead by example, even from a distance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="cta-section">
+                <div class="cta-card">
+                    <div class="cta-content">
+                        <h3>Let's Connect!</h3>
+                        <p>Ready to collaborate or just want to chat about technology? I'd love to hear from you!</p>
+                        <div class="cta-buttons">
+                            <a href="{{url_for('feedback')}}" class="btn-primary">
+                                <i class="fas fa-envelope"></i>
+                                Send Email to mail:vuyiswaandile176@gmail.com
+                            </a>
+                            <a href="{{url_for('feedback')}}" class="btn-secondary">
+                                <i class="fas fa-phone"></i>
+                                Call Me To : 0698113787
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.querySelectorAll('.contact-card, .social-card, .inspiration-card, .cta-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Social links hover effect
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Copy contact info to clipboard
+        document.querySelectorAll('.contact-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.href.startsWith('tel:') || this.href.startsWith('mailto:')) {
+                    return; // Let default behavior happen
+                }
+                
+                e.preventDefault();
+                navigator.clipboard.writeText(this.textContent).then(() => {
+                    // Show a temporary tooltip
+                    const tooltip = document.createElement('div');
+                    tooltip.textContent = 'Copied!';
+                    tooltip.className = 'copy-tooltip';
+                    this.parentNode.appendChild(tooltip);
+                    
+                    setTimeout(() => {
+                        tooltip.remove();
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+
+
+{% endblock %}
+    
+</body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andile Vuyiswa Ntshangase - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    {% extends 'header.html' %}
+
+    {% block content %}
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <div class="profile-section">
+                        <div class="profile-image-container">
+                            <img src="{{url_for('static',filename='Andile_Mgazi.png')}}" alt="Andile Vuyiswa Ntshangase" class="profile-image">
+                            <div class="profile-overlay"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="intro-section">
+                        <div class="greeting">
+                            <h1 class="name-title">Hello, I'm <span class="highlight">Andile Vuyiswa Ntshangase</span></h1>
+                            <div class="typing-container">
+                                <span class="typing-text">Aspiring Data Analyst & Software Developer</span>
+                            </div>
+                        </div>
+                        
+                        <div class="description">
+                            <p class="intro-text">
+                                As I embark on this IT journey, I'm thrilled to share my passion for coding and innovation. 
+                                My ultimate goal is to become a skilled <strong>Data Scientist</strong> or <strong>Software Developer</strong>, 
+                                where I can apply my skills to real-world problems.
+                            </p>
+                            
+                            <div class="skills-highlight">
+                                <h3><i class="fas fa-code"></i> Current Projects & Skills</h3>
+                                <p>
+                                    Currently, I'm working on a group project to develop a mobile app, utilizing my Python skills 
+                                    and knowledge of big data structures. I'm excited to expand my skill set by learning Flask 
+                                    and exploring other programming languages.
+                                </p>
+                            </div>
+                            
+                            <div class="tech-stack">
+                                <h3><i class="fas fa-tools"></i> My Toolkit</h3>
+                                <p>
+                                    In my toolkit, I've honed expertise in various IDEs including <span class="tech">Visual Studio</span>, 
+                                    <span class="tech">Eclipse</span>, <span class="tech">PyCharm</span>, <span class="tech">VSCode</span>, 
+                                    and <span class="tech">Windows Terminal</span>. Previously, I worked with <span class="tech">C#</span> 
+                                    using the <span class="tech">ASP.NET</span> framework for development.
+                                </p>
+                            </div>
+                            
+                            <div class="portfolio-info">
+                                <h3><i class="fas fa-globe"></i> This Portfolio</h3>
+                                <p>
+                                    This portfolio website is built using <span class="tech">Python Flask</span>, <span class="tech">CSS</span>, 
+                                    <span class="tech">HTML</span>, and <span class="tech">JavaScript</span>. I'm committed to continuous 
+                                    learning, dedicating time to mastering <span class="tech">Java</span>, <span class="tech">SQL</span>, 
+                                    <span class="tech">Python</span>, and frameworks like <span class="tech">Django</span> and <span class="tech">Flask</span>.
+                                </p>
+                            </div>
+                            
+                            <div class="github-section">
+                                <p>
+                                    My passion for innovation drives me to implement my skills in real-world projects, and I'm eager 
+                                    to showcase my work through both individual and group projects.
+                                </p>
+                                <div class="github-link">
+                                    <a href="https://github.com/0698113787/0698113787.git" target="_blank" class="btn-github">
+                                        <i class="fab fa-github"></i>
+                                        View My GitHub Repository
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="closing-statement">
+                                <p>
+                                    I'm excited to share my journey, skills, and projects with you. Dedication and perseverance 
+                                    are core to my approach, and I look forward to collaborating and learning from others in the tech community.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Journey Section -->
+            <section class="learning-journey-section">
+                <div class="journey-header">
+                    <h2><i class="fas fa-graduation-cap"></i> My Learning Journey</h2>
+                    <p class="journey-subtitle">From complete beginner to aspiring data analyst - here's how my coding adventure unfolded</p>
+                </div>
+
+                <div class="timeline">
+                    <!-- First Year -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <div class="year-badge">1st Year</div>
+                                <h3>First Exposure to Technology</h3>
+                                <p class="timeline-description">
+                                    My first encounter with coding was both crazy and funny - I had no idea what was happening! 
+                                    This was my introduction to the amazing world of technology.
+                                </p>
+                                <div class="skills-learned">
+                                    <h4><i class="fas fa-code"></i> What I Learned:</h4>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">C#</span>
+                                        <span class="skill-tag">MVC</span>
+                                        <span class="skill-tag">ASP.NET</span>
+                                        <span class="skill-tag">Entity Framework</span>
+                                        <span class="skill-tag">Visual Studio</span>
+                                        <span class="skill-tag">Statistics</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Year -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <div class="year-badge">2nd Year</div>
+                                <h3>Data Structures & Algorithms</h3>
+                                <p class="timeline-description">
+                                    Dove deep into the fundamentals of computer science and started my journey with Python. 
+                                    Also learned about computer components and self-taught HTML & CSS.
+                                </p>
+                                <div class="skills-learned">
+                                    <h4><i class="fas fa-code"></i> What I Learned:</h4>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Python</span>
+                                        <span class="skill-tag">Data Structures</span>
+                                        <span class="skill-tag">Algorithms</span>
+                                        <span class="skill-tag">SQL Theory</span>
+                                        <span class="skill-tag">Computer Hardware</span>
+                                        <span class="skill-tag">HTML</span>
+                                        <span class="skill-tag">CSS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Third Year -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <div class="year-badge">3rd Year</div>
+                                <h3>Full-Stack Development & Applications</h3>
+                                <p class="timeline-description">
+                                    Built real-world applications including web apps and mobile applications. 
+                                    This year marked my transition from learning concepts to building actual projects that solve real problems.
+                                </p>
+                                <div class="skills-learned">
+                                    <h4><i class="fas fa-code"></i> What I Learned:</h4>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Python Flask,Pandas,NumPy</span>
+                                        <span class="skill-tag">SQLite and SQL</span>
+                                        <span class="skill-tag">Jupyter Notebook</span>
+                                        <span class ="skill-tag">Machine Learning</span>
+                                        <span class="skill-tag">Android Studio</span>
+                                        <span class="skill-tag">Java & JavaScript</span>
+                                        <span class="skill-tag">API Integration</span>
+                                        <span class="skill-tag">Authentication</span>
+                                    </div>
+                                </div>
+                                <div class="project-links">
+                                    <h4><i class="fas fa-folder-open"></i> Projects Built:</h4>
+                                    <div class="project-grid">
+                                        <a href="#" class="project-link completed">
+                                            <i class="fas fa-globe"></i> 
+                                            <span class="project-title">Portfolio Website</span>
+                                            <span class="project-desc">Flask-based personal portfolio</span>
+                                        </a>
+                                        <a href="#" class="project-link completed">
+                                            <i class="fas fa-mobile-alt"></i> 
+                                            <span class="project-title">Mobile App</span>
+                                            <span class="project-desc">Android Studio & Java</span>
+                                        </a>
+                                        <a href="#" class="project-link completed">
+                                            <i class="fas fa-calendar-check"></i> 
+                                            <span class="project-title">Booking System</span>
+                                            <span class="project-desc">Flask-based reservation system</span>
+                                        </a>
+                                        <a href="https://weather-app-2-bwoz.onrender.com" class="project-link completed">
+                                            <i class="fas fa-cloud-sun"></i> 
+                                            <span class="project-title">Weather Application</span>
+                                            <span class="project-desc">API integration & real-time data</span>
+                                        </a>
+                                        <a href="#" class="project-link completed">
+                                            <i class="fas fa-birthday-cake"></i> 
+                                            <span class="project-title">Aunt's Baking App</span>
+                                            <span class="project-desc">Custom bakery management system</span>
+                                        </a>
+                                        <a href="https://registeration-and-login-auth.onrender.com" class="project-link completed">
+                                            <i class="fas fa-shield-alt"></i> 
+                                            <span class="project-title">Authentication Application</span>
+                                            <span class="project-desc">Secure user login & registration system</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Current Focus & Future Goals Combined -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon future-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-card future-card">
+                                <div class="year-badge future-badge">Current Focus & Future Goals</div>
+                                <h3>Data Science & Analytics Mastery</h3>
+                                <p class="timeline-description">
+                                    Currently mastering the art of data manipulation and analysis while working toward becoming a professional Data Analyst. 
+                                    Learning to extract meaningful insights from complex datasets and building predictive models using machine learning algorithms.
+                                </p>
+                                
+                                <!-- Current Data Science Skills -->
+                                <div class="current-skills-section">
+                                    <div class="section-header current-header">
+                                        <h4><i class="fas fa-cog fa-spin-slow"></i> Currently Learning & Applying</h4>
+                                    </div>
+                                    
+                                    <div class="skills-learned">
+                                        <h5><i class="fas fa-database"></i> Data Manipulation with Pandas:</h5>
+                                        <div class="skill-tags">
+                                            <span class="skill-tag current-skill">Reading Excel Files</span>
+                                            <span class="skill-tag current-skill">Data Filtering</span>
+                                            <span class="skill-tag current-skill">DataFrame Ordering</span>
+                                            <span class="skill-tag current-skill">Indexing</span>
+                                            <span class="skill-tag current-skill">GroupBy & Aggregation</span>
+                                            <span class="skill-tag current-skill">Merging & Joining</span>
+                                            <span class="skill-tag current-skill">DataFrame Concatenation</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skills-learned">
+                                        <h5><i class="fas fa-chart-area"></i> Data Visualization:</h5>
+                                        <div class="skill-tags">
+                                            <span class="skill-tag current-skill">NumPy Arrays</span>
+                                            <span class="skill-tag current-skill">Matplotlib Graphs</span>
+                                            <span class="skill-tag current-skill">Statistical Plots</span>
+                                            <span class="skill-tag current-skill">Data Storytelling</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skills-learned">
+                                        <h5><i class="fas fa-brain"></i> Machine Learning Algorithms:</h5>
+                                        <div class="skill-tags">
+                                            <span class="skill-tag current-skill">Linear Regression</span>
+                                            <span class="skill-tag current-skill">Support Vector Machines</span>
+                                            <span class="skill-tag current-skill">Decision Trees</span>
+                                            <span class="skill-tag current-skill">Random Forest</span>
+                                            <span class="skill-tag current-skill">Confusion Matrix</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skills-learned">
+                                        <h5><i class="fas fa-cogs"></i> ML Categories:</h5>
+                                        <div class="skill-tags">
+                                            <span class="skill-tag current-skill">Supervised Learning</span>
+                                            <span class="skill-tag current-skill">Classification</span>
+                                            <span class="skill-tag current-skill">Regression</span>
+                                            <span class="skill-tag current-skill">Unsupervised Learning</span>
+                                            <span class="skill-tag current-skill">Reinforcement Learning</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Future Goals -->
+                                <div class="future-skills-section">
+                                    <div class="section-header future-header">
+                                        <h4><i class="fas fa-rocket"></i> Advanced Skills to Master</h4>
+                                    </div>
+                                    
+                                    <div class="skills-learned">
+                                        <h5><i class="fas fa-chart-bar"></i> Business Intelligence & Visualization:</h5>
+                                        <div class="skill-tags">
+                                            <span class="skill-tag future-skill">Power BI</span>
+                                            <span class="skill-tag future-skill">Tableau</span>
+                                            <span class="skill-tag future-skill">Advanced Excel</span>
+                                            <span class="skill-tag future-skill">Seaborn</span>
+                                            <span class="skill-tag future-skill">Plotly</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skills-learned">
+                                        <h5><i class="fas fa-database"></i> Advanced Data Management:</h5>
+                                        <div class="skill-tags">
+                                            <span class="skill-tag future-skill">SQL Advanced</span>
+                                            <span class="skill-tag future-skill">PostgreSQL</span>
+                                            <span class="skill-tag future-skill">MongoDB</span>
+                                            <span class="skill-tag future-skill">Data Warehousing</span>
+                                            <span class="skill-tag future-skill">ETL Processes</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skills-learned">
+                                        <h5><i class="fas fa-robot"></i> Advanced Machine Learning:</h5>
+                                        <div class="skill-tags">
+                                            <span class="skill-tag future-skill">Deep Learning</span>
+                                            <span class="skill-tag future-skill">TensorFlow</span>
+                                            <span class="skill-tag future-skill">Scikit-learn Advanced</span>
+                                            <span class="skill-tag future-skill">Neural Networks</span>
+                                            <span class="skill-tag future-skill">Natural Language Processing</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Future Projects -->
+                                <div class="project-links">
+                                    <h4><i class="fas fa-folder-open"></i> Upcoming Projects:</h4>
+                                    <div class="project-grid">
+                                        <a href="#" class="project-link future">
+                                            <i class="fas fa-chart-bar"></i> 
+                                            <span class="project-title">Data Analytics Dashboard</span>
+                                            <span class="project-desc">Interactive visualization platform</span>
+                                        </a>
+                                        <a href="#" class="project-link future">
+                                            <i class="fas fa-robot"></i> 
+                                            <span class="project-title">AI-Powered Tool</span>
+                                            <span class="project-desc">Machine learning application</span>
+                                        </a>
+                                        <a href="#" class="project-link future">
+                                            <i class="fas fa-briefcase"></i> 
+                                            <span class="project-title">Professional Portfolio</span>
+                                            <span class="project-desc">Comprehensive data analyst showcase</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Career Goal -->
+                                <div class="career-goal">
+                                    <h4><i class="fas fa-target"></i> Ultimate Career Goal</h4>
+                                    <p class="goal-text">
+                                        To build a comprehensive data analyst portfolio and apply these skills in the real world 
+                                        to solve meaningful problems while securing employment as a professional Data Analyst or Data Scientist.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Continue Reading Section -->
+            <section class="continue-section">
+                <div class="continue-card">
+                    <div class="continue-content">
+                        <h3><i class="fas fa-user-tie"></i> My Inspiration</h3>
+                        <p class="continue-text">
+                            I'm inspired by <strong>Nkosinathi Ngubane</strong> who works as a contract commercial coordinator at ABSA. He st...
+                        </p>
+                        <a href="{{url_for('about')}}" class="btn-continue">
+                            <span>Read More About My Journey</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main> 
+    <script>
+        // Typing animation
+        const typingText = document.querySelector('.typing-text');
+        const phrases = [
+            'Passionate About Becoming Data Analyst & Software Developer',
+            'Python Flask & Machine learning Enthusiast',
+            'Problem Solver & Innovator',
+            'Continuous Learner'
+        ];
+        
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                setTimeout(() => isDeleting = true, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+            }
+            
+            const typingSpeed = isDeleting ? 50 : 100;
+            setTimeout(type, typingSpeed);
+        }
+        
+        // Start typing animation
+        setTimeout(type, 1000);
+        
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.stat-card, .continue-card, .skills-highlight, .tech-stack, .portfolio-info, .timeline-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Timeline animation
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('timeline-animate');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            timelineObserver.observe(item);
+        });
+
+        // Project link hover effects
+        document.querySelectorAll('.project-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+
+    {% endblock %}
+</body>
+</html>

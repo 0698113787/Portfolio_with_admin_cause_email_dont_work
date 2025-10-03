@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Certificates</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='certificates.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    {% extends 'header.html' %}
+
+    {% block content %}
+     <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-certificate"></i> Professional Certificates</h1>
+            <p>Showcasing expertise and continuous learning in technology</p>
+        </header>
+        <div class="certificates-grid">
+            <div class="cert-card" data-aos="fade-up">
+                <div class="cert-image">
+                    <img src="{{url_for('static', filename='Mobile_certificates.jpeg')}}" alt="Mobile Digital Literacy Certificate">
+                    <div class="cert-overlay">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                </div>
+                <div class="cert-content">
+                    <h3>Mobile Digital Literacy Certificate</h3>
+                    <div class="cert-details">
+                        <div class="detail-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Benefits:</strong>
+                                <p>Equips individuals with essential skills for mobile device usage, security and troubleshooting, boosting digital literacy.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-bullseye"></i>
+                            <div>
+                                <strong>Focus Areas:</strong>
+                                <p>Mobile device basics, security best practices, and troubleshooting techniques.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="cert-image">
+                    <img src="{{url_for('static', filename='NDG_certificates.jpeg')}}" alt="NDG Linux Certificate">
+                    <div class="cert-overlay">
+                    <i class="fab fa-linux"></i>
+                    </div>
+                </div>
+                <div class="cert-content">
+                    <h3>NDG Linux Certificate</h3>
+                    <div class="cert-details">
+                        <div class="detail-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Benefits:</strong>
+                                <p>Demonstrates foundational knowledge of Linux operating systems, enhancing career prospects in IT and tech-related fields.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-bullseye"></i>
+                            <div>
+                                <strong>Focus Areas:</strong>
+                                <p>Linux basics, installation, and command-line interface.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="cert-image">
+                    <img src="{{url_for('static', filename='cyber_cerificates.jpeg')}}" alt="Introduction to Cybersecurity Certificate">
+                    <div class="cert-overlay">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+                <div class="cert-content">
+                    <h3>Introduction to Cybersecurity Certificate</h3>
+                    <div class="cert-details">
+                        <div class="detail-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Benefits:</strong>
+                                <p>Provides foundational understanding of cybersecurity principles, threats and best practices, preparing individuals for a career in cybersecurity.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-bullseye"></i>
+                            <div>
+                                <strong>Focus Areas:</strong>
+                                <p>Cybersecurity basics, threat types, risk management, and security measures.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+    <div class="cert-image">
+        <img src="{{url_for('static', filename='FNB_cert.png')}}" alt="FNB Academy Full Stack Certificate">
+        <div class="cert-overlay">
+            <i class="fas fa-code"></i>
+        </div>
+    </div>
+    <div class="cert-content">
+        <h3>FNB Academy Full Stack Development Certificate</h3>
+        <div class="cert-details">
+            <div class="detail-item">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <strong>Benefits:</strong>
+                    <p>Demonstrates comprehensive full-stack development skills from web to mobile applications, enhancing career opportunities in software development and fintech industries.</p>
+                </div>
+            </div>
+            <div class="detail-item">
+                <i class="fas fa-bullseye"></i>
+                <div>
+                    <strong>Focus Areas:</strong>
+                    <p>HTML, CSS, JavaScript, Python, web-to-mobile app conversion, and full-stack development fundamentals across 9 intensive weeks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+            
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Add hover effects and interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            const certCards = document.querySelectorAll('.cert-card');
+            
+            certCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+
+    {% endblock %}
+    
+</body>
+</html>

@@ -1,0 +1,277 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    margin-top: 80px; /* Account for fixed navbar */
+}
+
+/* Navbar styles */
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+/* Logo styles */
+.nav-logo h2 {
+    color: #1f2937;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+/* Navigation menu */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: #6b7280;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    position: relative;
+    text-transform: capitalize;
+    letter-spacing: 0.025em;
+    min-height: 44px; /* Minimum touch target */
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    background: #f3f4f6;
+    color: #374151;
+    transform: translateY(-1px);
+}
+
+.nav-link.current {
+    background: #3b82f6;
+    color: white;
+    font-weight: 600;
+}
+
+/* Active link hover state */
+.nav-link.current:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+    min-height: 44px;
+    min-width: 44px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger:hover {
+    background: #f3f4f6;
+}
+
+.bar {
+    width: 24px;
+    height: 2px;
+    background-color: #374151;
+    margin: 3px 0;
+    transition: 0.25s ease;
+    border-radius: 2px;
+}
+
+/* Hamburger animation */
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+    body {
+        margin-top: 70px;
+    }
+    
+    .nav-container {
+        height: 70px;
+        padding: 0 16px;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: #ffffff;
+        width: 100%;
+        text-align: left;
+        transition: left 0.3s ease;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #e5e7eb;
+        gap: 0;
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 16px 24px;
+        font-size: 1rem;
+        display: block;
+        border-radius: 0;
+        width: 100%;
+        min-height: 56px; /* Larger touch target on mobile */
+        justify-content: flex-start;
+    }
+
+    .nav-link:hover {
+        background: #f9fafb;
+        transform: none;
+        border-left: 4px solid #3b82f6;
+        padding-left: 20px;
+    }
+
+    .nav-link.current {
+        background: #eff6ff;
+        color: #3b82f6;
+        border-left: 4px solid #3b82f6;
+        padding-left: 20px;
+    }
+
+    .nav-link.current:hover {
+        background: #dbeafe;
+        color: #2563eb;
+    }
+
+    .nav-logo h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus states for accessibility */
+.nav-link:focus,
+.hamburger:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .nav-link,
+    .hamburger,
+    .bar,
+    .nav-menu {
+        transition: none;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .navbar {
+        background: #1f2937;
+        border-bottom: 1px solid #374151;
+    }
+    
+    .nav-logo h2 {
+        color: #f9fafb;
+    }
+    
+    .nav-link {
+        color: #d1d5db;
+    }
+    
+    .nav-link:hover {
+        background: #374151;
+        color: #f3f4f6;
+    }
+    
+    .nav-link.current {
+        background: #3b82f6;
+        color: white;
+    }
+    
+    .hamburger:hover {
+        background: #374151;
+    }
+    
+    .bar {
+        background-color: #d1d5db;
+    }
+    
+    .nav-menu {
+        background: #1f2937;
+        border-top: 1px solid #374151;
+    }
+    
+    .nav-link:hover {
+        background: #2d3748;
+        border-left-color: #3b82f6;
+    }
+    
+    .nav-link.current {
+        background: #1e3a8a;
+        color: #dbeafe;
+        border-left-color: #60a5fa;
+    }
+}

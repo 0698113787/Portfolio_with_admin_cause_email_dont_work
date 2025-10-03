@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 20px 0;
+    line-height: 1.6;
+}
+
+/* Form Container */
+form {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Page Title */
+form::before {
+    content: "What People Say About Me";
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Gallery Card Styles */
+.gallery {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 30px 0;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Stagger animation for each gallery item */
+.gallery:nth-child(1) { animation-delay: 0.1s; }
+.gallery:nth-child(2) { animation-delay: 0.3s; }
+.gallery:nth-child(3) { animation-delay: 0.5s; }
+.gallery:nth-child(4) { animation-delay: 0.7s; }
+
+/* Hover Effects */
+.gallery:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    border-color: #3498db;
+}
+
+/* Decorative Element */
+.gallery::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 8rem;
+    color: #3498db;
+    opacity: 0.1;
+    font-family: serif;
+    line-height: 1;
+}
+
+/* Name/Title Styling */
+.gallery h4 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.gallery h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(45deg, #3498db, #9b59b6);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.gallery:hover h4::after {
+    width: 100px;
+}
+
+/* Profile Image Styling */
+.gallery img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    float: left;
+    margin: 0 25px 20px 0;
+    border: 4px solid transparent;
+    background: linear-gradient(45deg, #3498db, #9b59b6);
+    padding: 3px;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery img:hover {
+    transform: rotate(5deg) scale(1.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Testimonial Text Container */
+.para {
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+}
+
+.para p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    font-style: italic;
+    transition: color 0.3s ease;
+}
+
+.gallery:hover .para p {
+    color: #333;
+}
+
+/* Quote Marks */
+.para p::before {
+    content: '"';
+    font-size: 2rem;
+    color: #3498db;
+    opacity: 0.7;
+    margin-right: 5px;
+    vertical-align: top;
+    line-height: 1;
+}
+
+.para p::after {
+    content: '"';
+    font-size: 2rem;
+    color: #3498db;
+    opacity: 0.7;
+    margin-left: 5px;
+    vertical-align: top;
+    line-height: 1;
+}
+
+/* =================== RESPONSIVE DESIGN =================== */
+
+/* Tablet View */
+@media screen and (max-width: 768px) {
+    form::before {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+    
+    .gallery {
+        margin: 20px 0;
+        padding: 25px 20px;
+    }
+    
+    .gallery img {
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+    }
+    
+    .gallery h4 {
+        font-size: 1.6rem;
+    }
+    
+    .para p {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px 0;
+    }
+    
+    form {
+        padding: 10px;
+    }
+    
+    form::before {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .gallery {
+        padding: 20px 15px;
+        margin: 15px 0;
+        border-radius: 15px;
+    }
+    
+    .gallery img {
+        width: 70px;
+        height: 70px;
+        margin: 0 15px 15px 0;
+    }
+    
+    .gallery h4 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+    
+    .para p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
+    .gallery::before {
+        font-size: 6rem;
+        top: -5px;
+        left: 15px;
+    }
+}
+
+/* =================== ANIMATIONS =================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading Animation */
+.gallery {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus Styles for Accessibility */
+.gallery:focus-within {
+    outline: 3px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* =================== SPECIAL EFFECTS =================== */
+
+/* Subtle gradient overlay on hover */
+.gallery:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.05), rgba(155, 89, 182, 0.05));
+    pointer-events: none;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Text selection styling */
+::selection {
+    background: #3498db;
+    color: white;
+}
+
+::-moz-selection {
+    background: #3498db;
+    color: white;
+}

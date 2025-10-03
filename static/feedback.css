@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, hsl(256, 38%, 92%) 0%, #9180af 100%);
+    min-height: 100vh;
+}
+
+/* Form Container Styles */
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-container h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #7c5cff;
+    box-shadow: 0 0 5px rgba(124, 92, 255, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+/* Button Styles */
+.submit-btn {
+    background: linear-gradient(135deg, #7c5cff 0%, #6b4cdc 100%);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(124, 92, 255, 0.3);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #6b4cdc 0%, #5a3bc4 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(124, 92, 255, 0.4);
+}
+
+/* Link Styles */
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: #7c5cff;
+}

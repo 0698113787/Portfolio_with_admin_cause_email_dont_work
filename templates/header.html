@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='header.css') }}">
+</head>
+<body>
+     <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Mgazi's Portfolio</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="{{url_for('home')}}" class="nav-link">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{url_for('certificates')}}" class="nav-link">CERTIFICATES & SKILLS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{url_for('testimonials')}}" class="nav-link">TESTIMONIALS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{url_for('about')}}" class="nav-link">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{url_for('feedback')}}" class="nav-link">FEEDBACK</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Add active class to current page
+        const currentLocation = location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            if(link.getAttribute('href') === currentLocation) {
+                link.classList.add('current');
+            }
+        });
+    </script>
+
+
+    {% block content %}
+
+
+
+    {% endblock %}
+    
+</body>
+</html>

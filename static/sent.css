@@ -1,0 +1,60 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #e8e4f3 0%, #d6cce8 100%);
+    min-height: 100vh;
+}
+
+/* Success Page Styles */
+.success-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.checkmark {
+    color: #7c5cff;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.success-container h1 {
+    color: #7c5cff;
+    margin-bottom: 20px;
+}
+
+.success-container p {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Button Styles */
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.home-btn {
+    background: linear-gradient(135deg, #7c5cff 0%, #6b4cdc 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(124, 92, 255, 0.3);
+}
+
+.home-btn:hover {
+    background: linear-gradient(135deg, #6b4cdc 0%, #5a3bc4 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(124, 92, 255, 0.4);
+}
