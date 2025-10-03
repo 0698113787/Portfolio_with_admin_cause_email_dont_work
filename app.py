@@ -2,6 +2,9 @@ from flask import Flask, render_template, request, redirect, url_for, session, f
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import os
+from dotenv import load_dotenv
+load_dotenv()
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'your-fallback-secret-key')
@@ -10,9 +13,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
-#Admin credentials
-ADMIN_USERNAME = 'Andile'
-ADMIN_PASSWORD = '2010'
+# Admin credentials from environment variables
+ADMIN_USERNAME = os.getenv('ADMIN_USERNAME', 'admin')
+ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD', 'changeme')
 
 #Database Model
 class Message(db.Model):
@@ -87,7 +90,7 @@ def sent():
 def fail():
     return render_template('fail.html')
 
-@app.route('/admin/login', methods=['GET', 'POST'])
+@app.route('/admin_login', methods=['GET', 'POST'])
 def admin_login():
     if session.get('admin_logged_in'):
         return redirect(url_for('admin_dashboard'))
@@ -106,7 +109,7 @@ def admin_login():
     
     return render_template('login.html')
 
-@app.route('/admin/dashboard')
+@app.route('/admin_dashboard')
 def admin_dashboard():
     if not session.get('admin_logged_in'):
         flash('Please login to access the admin dashboard', 'error')
@@ -120,13 +123,13 @@ def admin_dashboard():
     
     return render_template('admin.html', messages=messages, unread_count=unread_count)
 
-@app.route('/admin/logout')
+@app.route('/admin_logout')
 def admin_logout():
     session.pop('admin_logged_in', None)
     flash('You have been logged out', 'success')
     return redirect(url_for('home'))
 
-@app.route('/admin/delete/<int:id>')
+@app.route('/admin_delete/<int:id>')
 def delete_message(id):
     if not session.get('admin_logged_in'):
         return redirect(url_for('admin_login'))
@@ -142,7 +145,7 @@ def delete_message(id):
     
     return redirect(url_for('admin_dashboard'))
 
-@app.route('/admin/mark-read/<int:id>')
+@app.route('/admin_mark-read/<int:id>')
 def mark_read(id):
     if not session.get('admin_logged_in'):
         return redirect(url_for('admin_login'))
@@ -158,7 +161,7 @@ def mark_read(id):
     
     return redirect(url_for('admin_dashboard'))
 
-@app.route('/api/unread-count')
+@app.route('/api_unread-count')
 def unread_count():
     count = Message.query.filter_by(is_read=False).count()
     return {'unread': count}
