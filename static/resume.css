@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    font-size: 0.95em;
+}
+
+.contact-info span,
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.contact-info a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.content {
+    padding: 40px;
+}
+
+.back-home {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.back-home a {
+    text-decoration: none;
+}
+
+.back-btn {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+}
+
+.download-btn {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.download-btn a {
+    text-decoration: none;
+}
+
+.download-cv-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: 600;
+}
+
+.download-cv-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.section {
+    margin-bottom: 35px;
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: #667eea;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+    font-weight: 600;
+}
+
+.summary {
+    font-size: 1.05em;
+    line-height: 1.8;
+    color: #555;
+}
+
+.summary ul {
+    margin-top: 10px;
+}
+
+.summary ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.education-item,
+.experience-item {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    border-left: 3px solid #764ba2;
+}
+
+.education-item h3,
+.experience-item h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.education-item .institution,
+.experience-item .company {
+    font-size: 1.1em;
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.education-item .date,
+.experience-item .date {
+    color: #888;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.education-item ul,
+.experience-item ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.education-item li,
+.experience-item li {
+    margin-bottom: 8px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-category {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-category:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h4 {
+    color: #667eea;
+    margin-bottom: 12px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category li {
+    padding: 5px 0;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.skill-category li:hover {
+    color: #667eea;
+}
+
+.skill-category li:before {
+    content: "▹ ";
+    color: #764ba2;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+        border-radius: 0;
+    }
+    
+    .download-btn,
+    .back-home {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .header h1 {
+        font-size: 1.8em;
+    }
+    
+    .header p {
+        font-size: 1em;
+    }
+    
+    .content {
+        padding: 20px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .section-title {
+        font-size: 1.5em;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .back-btn,
+    .download-cv-btn {
+        padding: 10px 25px;
+        font-size: 0.95em;
+    }
+}

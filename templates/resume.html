@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andile Ntshangase - CV/Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='resume.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Andile Ntshangase</h1>
+            <p>Aspiring Data Scientist & Analyst | Software Developer</p>
+            <div class="contact-info">
+                <span>📧 vuyiswaandile176@gmail.com</span>
+                <span>📱 0698113787</span>
+                <span>📍 Durban, South Africa</span>
+                <a href="https://github.com/0698113787" target="_blank">🔗 GitHub</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="back-home">
+                <a href="{{ url_for('home') }}">
+                    <button class="back-btn">Back to Home</button>
+                </a>
+            </div>
+
+            <div class="download-btn">
+                <a href="{{ url_for('static', filename='mycv.pdf') }}" download="Andile_Ntshangase_CV.pdf">
+                    <button class="download-cv-btn">📄 Download My CV</button>
+                </a>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <p class="summary">
+                    Dedicated Bachelor of ICT graduate with a strong foundation in software development, data analysis, 
+                    and problem-solving. Passionate about leveraging technology to create innovative solutions and 
+                    extract meaningful insights from data. Experienced in full-stack development with proficiency in 
+                    Python, Flask, and modern web technologies. Eager to contribute technical expertise and analytical 
+                    skills to challenging projects in data science and software development.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <h3>Bachelor in Information and Communication Technology (ICT)</h3>
+                    <div class="institution">Durban University of Technology (DUT)</div>
+                    <div class="date">Final Year | Expected Graduation: 2025</div>
+                    <ul>
+                        <li>Specialized in Software Development and Data Analytics</li>
+                        <li>Relevant coursework: Database Management, Web Development, Data Structures, Machine Learning, Statistics</li>
+                        <li>Capstone Project: Full-stack portfolio website with admin dashboard</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Programming Languages</h4>
+                        <ul>
+                            <li>PHP</li>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>HTML5 & CSS3</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Frameworks & Libraries</h4>
+                        <ul>
+                            <li>Flask</li>
+                            <li>SQLAlchemy</li>
+                            <li>Pandas & NumPy</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Data & Analytics</h4>
+                        <ul>
+                            <li>Data Analysis</li>
+                            <li>Data Visualization</li>
+                            <li>Excel (Advanced)</li>
+                            <li>Statistical Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools & Platforms</h4>
+                        <ul>
+                            <li>Git & GitHub</li>
+                            <li>Render (Deployment)</li>
+                            <li>VS Code</li>
+                            <li>Jupyter Notebook</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Competencies</h2>
+                <div class="summary">
+                    <ul style="margin-left: 20px;">
+                        <li>Strong analytical and problem-solving abilities</li>
+                        <li>Excellent attention to detail and data accuracy</li>
+                        <li>Effective communication and documentation skills</li>
+                        <li>Self-motivated learner with passion for emerging technologies</li>
+                        <li>Ability to work independently and in team environments</li>
+                        <li>Time management and project organization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Languages</h2>
+                <div class="summary">
+                    <strong>English:</strong> Fluent (Reading, Writing)<br>
+                    <strong>IsiZulu:</strong> Native Speaker
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

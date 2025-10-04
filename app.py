@@ -2,9 +2,6 @@ from flask import Flask, render_template, request, redirect, url_for, session, f
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import os
-from dotenv import load_dotenv
-load_dotenv()
-
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'your-fallback-secret-key')
@@ -51,6 +48,10 @@ def certificates():
 @app.route('/testimonials')
 def testimonials():
     return render_template('testimonials.html')
+
+@app.route('/resume')
+def resume():
+    return render_template('resume.html')
 
 @app.route('/feedback', methods=['GET', 'POST'])
 def feedback():
