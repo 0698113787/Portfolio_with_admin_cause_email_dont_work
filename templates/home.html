@@ -194,38 +194,61 @@
                                     <div class="project-grid">
                                         <a href="https://mgazi-portfolio.onrender.com" class="project-link completed">
                                             <i class="fas fa-globe"></i> 
-                                            <span class="project-title">Portfolio Website</span>
-                                            <span class="project-desc">Flask-based personal portfolio</span>
+                                            <div class="project-info">
+                                                <span class="project-title">Portfolio Website</span>
+                                                <span class="project-desc">Flask-based personal portfolio</span>
+                                            </div>
                                         </a>
-                                        <a href="#" class="project-link completed">
+                                        <div class="project-link loading">
                                             <i class="fas fa-mobile-alt"></i> 
-                                            <span class="project-title">Mobile App</span>
-                                            <span class="project-desc">Android Studio & Java</span>
-                                        </a>
-                                        <a href="#" class="project-link completed">
+                                            <div class="project-info">
+                                                <span class="project-title">Mobile App</span>
+                                                <span class="project-desc">Android Studio & Java</span>
+                                            </div>
+                                            <span class="loading-indicator">
+                                                <i class="fas fa-spinner fa-spin"></i>
+                                            </span>
+                                        </div>
+                                        <div class="project-link loading">
                                             <i class="fas fa-calendar-check"></i> 
-                                            <span class="project-title">Booking System</span>
-                                            <span class="project-desc">Flask-based reservation system</span>
-                                        </a>
+                                            <div class="project-info">
+                                                <span class="project-title">Booking System</span>
+                                                <span class="project-desc">Flask-based reservation system</span>
+                                            </div>
+                                            <span class="loading-indicator">
+                                                <i class="fas fa-spinner fa-spin"></i>
+                                            </span>
+                                        </div>
                                         <a href="https://weather-app-2-bwoz.onrender.com" class="project-link completed">
                                             <i class="fas fa-cloud-sun"></i> 
-                                            <span class="project-title">Weather Application</span>
-                                            <span class="project-desc">API integration & real-time data</span>
+                                            <div class="project-info">
+                                                <span class="project-title">Weather Application</span>
+                                                <span class="project-desc">API integration & real-time data</span>
+                                            </div>
                                         </a>
-                                        <a href="#" class="project-link completed">
+                                        <div class="project-link loading">
                                             <i class="fas fa-birthday-cake"></i> 
-                                            <span class="project-title">Aunt's Baking App</span>
-                                            <span class="project-desc">Custom bakery management system</span>
-                                        </a>
+                                            <div class="project-info">
+                                                <span class="project-title">Aunt's Baking App</span>
+                                                <span class="project-desc">Custom bakery management system</span>
+                                            </div>
+                                            <span class="loading-indicator">
+                                                <i class="fas fa-spinner fa-spin"></i>
+                                            </span>
+                                        </div>
                                         <a href="https://registeration-and-login-auth.onrender.com" class="project-link completed">
                                             <i class="fas fa-shield-alt"></i> 
-                                            <span class="project-title">Authentication Application</span>
-                                            <span class="project-desc">Secure user login & registration system</span>
+                                            <div class="project-info">
+                                                <span class="project-title">Authentication Application</span>
+                                                <span class="project-desc">Secure user login & registration system</span>
+                                            </div>
                                         </a>
                                         <a href="https://claculator-7k5f.onrender.com" class="project-link completed">
                                             <i class="fas fa-calculator"></i> 
-                                            <span class="project-title">Calculator App</span>
-                                            <span class="project-desc">Interactive calculator with advanced operations</span>
+                                            <div class="project-info">
+                                                <span class="project-title">Calculator App</span>
+                                                <span class="project-desc">Interactive calculator with advanced operations</span>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
@@ -345,21 +368,36 @@
                                 <div class="project-links">
                                     <h4><i class="fas fa-folder-open"></i> Upcoming Projects:</h4>
                                     <div class="project-grid">
-                                        <a href="#" class="project-link future">
+                                        <div class="project-link loading">
                                             <i class="fas fa-chart-bar"></i> 
-                                            <span class="project-title">Data Analytics Dashboard</span>
-                                            <span class="project-desc">Interactive visualization platform</span>
-                                        </a>
-                                        <a href="#" class="project-link future">
+                                            <div class="project-info">
+                                                <span class="project-title">Data Analytics Dashboard</span>
+                                                <span class="project-desc">Interactive visualization platform</span>
+                                            </div>
+                                            <span class="loading-indicator">
+                                                <i class="fas fa-spinner fa-spin"></i>
+                                            </span>
+                                        </div>
+                                        <div class="project-link loading">
                                             <i class="fas fa-robot"></i> 
-                                            <span class="project-title">AI-Powered Tool</span>
-                                            <span class="project-desc">Machine learning application</span>
-                                        </a>
-                                        <a href="#" class="project-link future">
+                                            <div class="project-info">
+                                                <span class="project-title">AI-Powered Tool</span>
+                                                <span class="project-desc">Machine learning application</span>
+                                            </div>
+                                            <span class="loading-indicator">
+                                                <i class="fas fa-spinner fa-spin"></i>
+                                            </span>
+                                        </div>
+                                        <div class="project-link loading">
                                             <i class="fas fa-briefcase"></i> 
-                                            <span class="project-title">Professional Portfolio</span>
-                                            <span class="project-desc">Comprehensive data analyst showcase</span>
-                                        </a>
+                                            <div class="project-info">
+                                                <span class="project-title">Professional Portfolio</span>
+                                                <span class="project-desc">Comprehensive data analyst showcase</span>
+                                            </div>
+                                            <span class="loading-indicator">
+                                                <i class="fas fa-spinner fa-spin"></i>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -468,7 +506,9 @@
         // Project link hover effects
         document.querySelectorAll('.project-link').forEach(link => {
             link.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px) scale(1.02)';
+                if (!this.classList.contains('loading')) {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                }
             });
             
             link.addEventListener('mouseleave', function() {

@@ -597,20 +597,71 @@ body {
     background: rgba(255, 255, 255, 0.95);
 }
 
+/* Project Info Container */
+.project-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Completed Projects */
 .project-link.completed {
     border-left: 4px solid #28a745;
 }
 
 .project-link.completed::after {
-   /* content: '✓';*/
+    content: '✓';
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: 10px;
+    right: 15px;
     color: #28a745;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
+    background: rgba(40, 167, 69, 0.1);
+    padding: 2px 8px;
+    border-radius: 50%;
 }
 
+/* Loading/In Progress Projects */
+.project-link.loading {
+    border-left: 4px solid #ffa500;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 245, 230, 0.9));
+    cursor: default;
+    pointer-events: none;
+}
+
+.loading-indicator {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ffa500;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.loading-indicator::before {
+    content: 'In Progress';
+    font-size: 0.7rem;
+    font-weight: 600;
+    background: rgba(255, 165, 0, 0.1);
+    padding: 3px 8px;
+    border-radius: 10px;
+    color: #ffa500;
+}
+
+/* Loading animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.project-link.loading .fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+/* Future Projects */
 .project-link.future {
     border-left: 4px solid #ff6b6b;
     opacity: 0.9;
@@ -619,15 +670,19 @@ body {
 .project-link.future::after {
     content: '⏳';
     position: absolute;
-    top: 5px;
-    right: 10px;
-    font-size: 0.8rem;
+    top: 10px;
+    right: 15px;
+    font-size: 1.2rem;
 }
 
 .project-link i {
     font-size: 1.2rem;
     color: #667eea;
     min-width: 20px;
+}
+
+.project-link.loading i:first-child {
+    color: #ffa500;
 }
 
 .project-link.future i {
@@ -832,6 +887,11 @@ body {
     .skill-tags {
         justify-content: center;
     }
+    
+    .loading-indicator {
+        position: static;
+        margin-left: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -862,9 +922,20 @@ body {
         align-items: flex-start;
         gap: 8px;
         text-align: left;
+        padding-right: 50px;
     }
     
-    .project-link i {
-        align-self: center;
+    .project-link i:first-child {
+        align-self: flex-start;
+    }
+    
+    .loading-indicator::before {
+        font-size: 0.65rem;
+    }
+    
+    .project-link.completed::after,
+    .project-link.future::after {
+        top: 15px;
+        right: 10px;
     }
 }
